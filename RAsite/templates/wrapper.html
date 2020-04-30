@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="minimum-scale=1.0, target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title here</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'fonts/font.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/adaptive.css' %}">
+  <script src="{% static 'js/html5.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <main id="main">
+      <div class="logo_block">
+        <div class="inner">
+          <div>
+            <div class="logo fleft">
+              <a href="/chats" style="background-image: url(/static/img/header/logo.svg)"></a>
+              <!--  <a href="/">
+                <span>Rent</span>
+                <span>Alliance</span>
+                <i>Сообщество арендаторов России</i>
+              </a>-->
+            </div>
+            <!--end logo-->
+            <div class="fright name">
+              <a href="/account">
+                {{user.get_username}}
+                <img src="{% static 'img/img_1.svg' %}" alt="">
+              </a>
+            </div>
+            <div class="rL hid link">
+              <a class="active" href="/chats">Чаты</a>
+              <a href="/account">Личный кабинет</a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!--end logo_block-->
+      {% block content %}
+
+      {% endblock %}
+    </main>
+    <!--end main-->
+  </div>
+  <!--end wrapper-->
+  <!-- <script src="{% static 'js/jquery.nice-select.js' %}"></script>
+  <script src="{% static 'js/jquery.arcticmodal.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script> -->
+</body>
+  <script src="{% static 'js/jquery.nice-select.js' %}"></script>
+  <script src="{% static 'js/jquery.arcticmodal.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</html>
